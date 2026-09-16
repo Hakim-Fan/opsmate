@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Privacy Policy for MySqlOps application.">
+    <title>Privacy Policy - MySqlOps</title>
+    <style>
+        :root {
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border-color: #e2e8f0;
+            --divider-color: #cbd5e0;
+            --header-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            --header-text: #ffffff;
+            --badge-bg: #0f3460;
+            --badge-text: #ffffff;
+            --list-marker: #0f3460;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --footer-text: #a0aec0;
+            --code-bg: #edf2f7;
+            --code-text: #2d3748;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-primary: #f1f5f9;
+                --text-secondary: #cbd5e1;
+                --border-color: #334155;
+                --divider-color: #475569;
+                --header-gradient: linear-gradient(135deg, #0b1120 0%, #0f172a 50%, #1e293b 100%);
+                --header-text: #f8fafc;
+                --badge-bg: #38bdf8;
+                --badge-text: #0f172a;
+                --list-marker: #38bdf8;
+                --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+                --footer-text: #64748b;
+                --code-bg: #334155;
+                --code-text: #e2e8f0;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.8;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            background: var(--header-gradient);
+            color: var(--header-text);
+            padding: 50px 40px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .dates {
+            font-size: 14px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* 语言切换按钮 */
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.7);
+            transform: translateY(-1px);
+        }
+
+        .content-box {
+            background: var(--card-bg);
+            border-radius: 0 0 12px 12px;
+            box-shadow: var(--shadow);
+            padding: 44px;
+            transition: background-color 0.3s ease;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section h3 .num {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .section p,
+        .section li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            padding-left: 22px;
+            margin-top: 8px;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+        }
+
+        .section ul li::marker {
+            color: var(--list-marker);
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px dashed var(--divider-color);
+            margin: 35px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--footer-text);
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* 语言控制 */
+        body.lang-zh .lang-en-content {
+            display: none !important;
+        }
+
+        body.lang-en .lang-zh-content {
+            display: none !important;
+        }
+
+        body:not(.lang-zh):not(.lang-en) .lang-zh-content {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px;
+            }
+
+            .header {
+                padding: 36px 18px 28px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header h2 {
+                font-size: 16px;
+            }
+
+            .content-box {
+                padding: 24px 18px;
+            }
+
+            .section h3 {
+                font-size: 16px;
+            }
+
+            .lang-toggle {
+                top: 14px;
+                right: 14px;
+                padding: 4px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body class="lang-en">
+    <div class="container">
+        <div class="header">
+            <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">中文</button>
+            <div class="lang-en-content">
+                <h1>Privacy Policy</h1>
+                <h2>MySqlOps</h2>
+                <div class="dates">
+                    Effective Date: March 1, 2026<br>
+                    Last Updated: March 16, 2026
+                </div>
+            </div>
+            <div class="lang-zh-content">
+                <h1>隐私协议</h1>
+                <h2>MySqlOps</h2>
+                <div class="dates">
+                    生效日期：2026年3月1日<br>
+                    最近更新日期：2026年3月16日
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+
+            <!-- Introduction -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">I</span>Introduction</h3>
+                        <p><b>MySqlOps</b> (hereinafter referred to as "the App", developed and maintained by the
+                            MySqlOps Team) is a standalone, client-side MySQL database management tool. Our core
+                            engineering principle is <b>zero data collection: we do not collect, store, track, or
+                                transmit any of your personal data or operational records to any of our servers or
+                                unconfigured third-party platforms</b>. This Privacy Policy outlines the data handling
+                            rules, security boundaries, and user rights of the App. Please read this document
+                            thoroughly. By downloading, accessing, or using the App, you acknowledge and agree to the
+                            terms described herein.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">引</span>引言</h3>
+                        <p><b>MySqlOps</b>（以下简称“本应用”，由 MySqlOps 团队开发与维护）是一款纯本地运行的 MySQL
+                            数据库移动端管理工具。我们的核心产品设计原则为<b>零数据收集：绝不收集、不追踪、不存储、不上传任何用户的个人数据或操作记录至我们自建的服务器或未经授权的第三方平台</b>。本隐私协议旨在向您明确本应用的数据处理边界、安全机制及用户权利。在下载、访问或使用本应用前，请您仔细阅读本协议全部内容；您的使用行为即视为完全知悉并同意本协议各条款。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 1. Personal Information Collection -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">1</span>Zero Personal Information Collection</h3>
+                        <p>The App <b>does not collect, track, or harvest any personal information</b>, specifically
+                            including:</p>
+                        <ul>
+                            <li><b>No Identity Information</b>: We do not collect names, phone numbers, email addresses,
+                                national IDs, or social accounts;</li>
+                            <li><b>No Hardware Identifiers</b>: We do not collect device serial numbers, IMEI, MAC
+                                addresses, IDFA/GAID, or operating system fingerprinting data;</li>
+                            <li><b>No Behavioral Analytics</b>: We do not track navigation paths, screen interaction
+                                frequencies, SQL query histories, or geo-location;</li>
+                            <li><b>No Tracking SDKs</b>: We do not integrate third-party advertising, commercial
+                                tracking, behavioral analytics, or user profiling SDKs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">一</span>零个人信息收集承诺</h3>
+                        <p>本应用<b>不收集、不追踪、不索取任何形式的个人隐私信息</b>，具体包括：</p>
+                        <ul>
+                            <li><b>无身份凭证收集</b>：不收集姓名、手机号码、电子邮箱、身份证号或任何第三方社交账号信息；</li>
+                            <li><b>无设备指纹采集</b>：不采集设备序列号、IMEI、MAC 地址、广告标识符（IDFA/GAID）或系统硬件指纹；</li>
+                            <li><b>无行为日志埋点</b>：不监控界面操作轨迹、查询频率、SQL 执行偏好或地理位置；</li>
+                            <li><b>无第三方追踪 SDK</b>：不嵌入任何第三方商业广告 SDK、行为统计分析或用户画像构建工具。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 2. Local Data Storage & Security -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">2</span>Local Data Storage & Cryptographic Protection</h3>
+                        <p>All operational data created or configured within the App resides exclusively on your local
+                            device. We have neither the technical capability nor the legal right to access, inspect,
+                            modify, or exfiltrate your local data:</p>
+                        <ul>
+                            <li><b>Database Connection Profiles</b>: MySQL host IP/domain, port, username, connection
+                                labels, and connection passwords entered by you;</li>
+                            <li><b>Query & Scratch Records</b>: SQL execution statements, saved code snippets, query
+                                results, and local table configurations;</li>
+                            <li><b>AI Configuration Keys</b>: AI endpoints, custom models, and API keys that you
+                                manually provide;</li>
+                            <li><b>Custom Preferences</b>: Theme choices, shortcut layouts, and local UI preferences.
+                            </li>
+                        </ul>
+                        <p><b>Hardware-Backed Local Encryption</b>: Sensitive credentials (including database passwords
+                            and private AI API Keys) are encrypted inside the application's local sandbox using
+                            system-level secure storage primitives (such as Apple Keychain on iOS and
+                            KeyStore/EncryptedSharedPreferences on Android) coupled with AES-256 standard encryption.
+                        </p>
+                        <p><b>Data Erasure</b>: You retain full sovereignty over your data. You may irrevocably erase
+                            all locally stored data at any time either via the in-app "Reset / Clear All Data" settings
+                            or by directly uninstalling the App from your device.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">二</span>本地数据存储与高强度加密保护</h3>
+                        <p>您在使用本应用过程中产生或配置的所有数据均仅留存在您的本地设备中。我们既无技术途径、亦无法律权限读取、审查、修改或转储您的任何数据：</p>
+                        <ul>
+                            <li><b>数据库连接配置</b>：您手动填写的 MySQL 服务器地址/域名、端口、用户名、连接别名以及连接密码；</li>
+                            <li><b>操作与收藏记录</b>：您编写并执行的 SQL 语句、SQL 收藏片段（Snippets）、查询结果缓存及表格展示偏好；</li>
+                            <li><b>AI 服务配置</b>：您自行录入的 AI 服务商地址、自定义模型名称及私有 API Key；</li>
+                            <li><b>应用环境设置</b>：主题偏好、快捷操作栏设置等个性化本地选项。</li>
+                        </ul>
+                        <p><b>系统级安全加密保障</b>：对于数据库连接密码、私有 API Key 等敏感凭据，本应用采用系统硬件级加密设施（如 iOS Keychain、Android
+                            KeyStore）并结合 AES-256 算法在本地应用沙箱内加密持久化，杜绝明文泄露风险。</p>
+                        <p><b>数据自主销毁</b>：您对自身数据享有完全的自主权。您可随时在应用内通过「设置 - 清空/重置所有数据」功能彻底销毁本地存储，亦可通过卸载本应用的方式永久抹除全部本地数据。</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 3. Special Notice on AI Features -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">3</span>Special Notice on AI Assistance Features</h3>
+                        <ul>
+                            <li><b>Bring Your Own Key (BYOK)</b>: The AI features provided in the App function strictly
+                                as an interactive client gateway. You must independently procure and configure your own
+                                AI service credentials (such as an API Key from OpenAI, DeepSeek, Anthropic, or
+                                compatible providers). We neither sell AI subscriptions nor levy intermediary fees on AI
+                                interactions;</li>
+                            <li><b>Direct End-to-End Transmission</b>: When using AI features (such as SQL generation,
+                                error interpretation, or query optimization), your submitted prompts and any schema
+                                context you deliberately attach are dispatched <b>directly from your mobile device to
+                                    your chosen AI vendor over an encrypted HTTPS connection</b>. No traffic is routed
+                                through, logged by, or inspected by our servers;</li>
+                            <li><b>Data Sensitivity Advisory & Disclaimer</b>: We strongly urge you to sanitize all
+                                confidential production secrets, proprietary business data, and personally identifiable
+                                information before submitting prompts to third-party AI models. Data retention and model
+                                training practices are governed entirely by your selected AI provider's privacy policy.
+                                The App disclaims all liability for the accuracy, compliance, or downstream processing
+                                of AI-generated content.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">三</span>AI 辅助功能特别说明</h3>
+                        <ul>
+                            <li><b>用户自主配置（BYOK）</b>：本应用内置的 AI 功能仅作为纯客户端调用入口。您需要自行取得并配置相应 AI 服务商的 API 访问凭据（如
+                                OpenAI、DeepSeek、Anthropic 或兼容协议的私有大模型）。我们不销售任何 AI 算力服务，亦不就 AI 功能收取中转费用；</li>
+                            <li><b>端到端直接通信</b>：当您发起 AI 智能辅助（如 SQL 自动生成、报错诊断、性能调优建议）时，您所输入的提示词以及您自主选择附加的上下文（如表结构 Schema
+                                片段、SQL 语句）均由您的设备<b>通过加密通道（HTTPS）直接与您配置的第三方 AI 服务商进行端到端通信</b>，不经过我们的任何中继服务器；</li>
+                            <li><b>数据脱敏提醒与免责</b>：请您在向 AI 发送请求前，务必对核心业务机密、未脱敏的生产环境数据进行谨慎评估与脱敏。第三方 AI
+                                服务商对交互数据的存储、留存与模型训练策略受其自身隐私协议约束，我们对第三方服务商的数据处理行为以及 AI 生成内容的准确性不承担连带担保责任。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 4. System Permissions -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">4</span>System Permissions</h3>
+                        <p>The App requests only the strictly minimal operating system permissions necessary to deliver
+                            core client functionalities:</p>
+                        <ul>
+                            <li><b>Network Access Permission</b>: Utilized solely to establish direct TCP/TLS
+                                connections to your designated MySQL database instances and to perform outbound HTTPS
+                                requests to your configured AI endpoints. It is never used for background silent
+                                tracking or analytical telemetry.</li>
+                            <li><b>Biometric Authentication Permission (Face ID / Touch ID / Fingerprint)</b>: Utilized
+                                exclusively for verifying your identity when you opt to enable the "App Lock" protection
+                                feature. This authentication is executed natively by your device operating system (e.g.,
+                                iOS LocalAuthentication, Android BiometricPrompt). <b>The App receives solely a boolean
+                                    verification result ("Success" or "Failed") and never reads, processes, stores, or
+                                    transmits your actual facial contours, fingerprint templates, or biometric
+                                    credentials.</b></li>
+                        </ul>
+                        <p>You may grant or revoke these permissions at any time via your device operating system
+                            settings. Revoking network permissions will prevent remote database connectivity, but your
+                            locally stored configurations will remain accessible.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">四</span>系统权限调用说明</h3>
+                        <p>本应用遵循最小必要原则，仅申请实现核心功能所必需的系统权限：</p>
+                        <ul>
+                            <li><b>网络访问权限（Network Permission）</b>：仅用于直接建立通往您指定的 MySQL 数据库服务器的 TCP/TLS 直连，以及向您自主配置的第三方 AI
+                                接口发送 HTTPS 请求。绝不用于任何静默上传或后台数据统计。</li>
+                            <li><b>生物识别认证权限（Face ID / Touch ID / 指纹识别）</b>：仅用于您主动开启「应用安全锁」时进行本地身份鉴权。该验证完全由操作系统底层安全框架接管（如
+                                iOS LocalAuthentication、Android
+                                BiometricPrompt），<b>本应用仅接收系统返回的“验证通过/失败”布尔结果，绝不会读取、收集、留存或上传您的面容图像、指纹原始特征等任何生物识别数据</b>。
+                            </li>
+                        </ul>
+                        <p>您可随时在操作系统「设置」中查看并自主调整以上权限。关闭网络权限将导致无法建立数据库直连和 AI 交互，但不影响您查看与管理本地已存记录。</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 5. User Responsibility and Data Autonomy -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">5</span>User Responsibilities & Data Autonomy</h3>
+                        <ul>
+                            <li>You are the sole custodian of all connection credentials, private keys, and database
+                                queries handled by the App. You are solely responsible for securing your physical device
+                                and safeguarding access credentials against unauthorized access;</li>
+                            <li>You represent and warrant that you hold legitimate authorization to access and query all
+                                target database instances managed through this App, and that your database activities
+                                comply with all applicable local, national, and international cybersecurity laws;</li>
+                            <li>Because the App operates in a zero-telemetry, offline-first model, we do not maintain
+                                backups of your database connection profiles or query histories. We strongly advise you
+                                to maintain external backups of vital connection parameters.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">五</span>用户责任与数据自主</h3>
+                        <ul>
+                            <li>您是本应用中所有配置数据与查询行为的唯一责任主体。请妥善保管您的物理设备、数据库凭证及 API Key，因个人设备丢失、凭据外泄或越狱/Root
+                                环境导致的安全损失由用户自行承担；</li>
+                            <li>您必须保证通过本应用所连接、查询与操作的所有数据库资产均已取得合法授权，且操作内容严格符合网络安全法与相关合规要求，严禁使用本应用从事非法侵入、未授权数据篡改等违法违规行为；
+                            </li>
+                            <li>鉴于本应用完全离线本地运行、无云端同步服务器，我们不维护任何云端备份。建议您自行对重要连接配置与 SQL 资产做好常规性独立备份。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 6. Protection of Minors -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">6</span>Protection of Minors</h3>
+                        <p>The App is a specialized developer and database administrator utility targeted at individuals
+                            with full civil capacity. Minors under the age of 18 should only use this App under the
+                            direction and supervision of a legal guardian, and must not access sensitive production
+                            databases containing protected personal information or confidential assets.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">六</span>未成年人保护</h3>
+                        <p>本应用主要面向具备完全民事行为能力的专业技术人员与数据库管理人员。若未满 18
+                            周岁的未成年人使用本应用，应在监护人的明确指导与监督下进行，严禁利用本应用访问包含未成年人个人信息或企业机密的生产数据库。</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 7. Updates to This Agreement -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">7</span>Amendments to This Policy</h3>
+                        <p>We may update this Privacy Policy periodically to reflect technological enhancements, App
+                            feature changes, or evolving regulatory standards. When significant updates occur, notices
+                            will be posted within the App or published via the official application store page. Your
+                            continued use of the App following any amendment indicates your acceptance of the revised
+                            terms.</p>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">七</span>隐私协议的修订与通知</h3>
+                        <p>我们可能会根据法律法规演进、技术架构调整或应用版本迭代适时修订本协议。重大变更将通过版本更新日志、应用内提示或应用商店页面进行明示公布。若您继续使用本应用，即视为知悉并同意受修订后协议的约束；如您不同意修订后的条款，可随时停止使用并卸载本应用。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- 8. Contact Us -->
+            <div class="section">
+                <div class="lang-en-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">8</span>Contact & Community Support</h3>
+                        <p>If you have any questions, suggestions, or compliance inquiries concerning this Privacy
+                            Policy, please reach out via our community channels:</p>
+                        <ul>
+                            <li><b>Team</b>: MySqlOps Team</li>
+                            <li><b>GitHub Issues & Discussions</b>: <a
+                                    href="https://github.com/Hakim-Fan/opsmate/issues" target="_blank"
+                                    rel="noopener noreferrer"
+                                    style="color: inherit; text-decoration: underline;">github.com/Hakim-Fan/opsmate/issues</a>
+                            </li>
+                            <li><b>Feedback Channel</b>: In-app "Settings - About & Feedback"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lang-zh-content">
+                    <div class="bilingual-block">
+                        <h3><span class="num">八</span>联系我们与意见反馈</h3>
+                        <p>如果您对本隐私协议有任何疑问、建议或合规事宜咨询，可通过以下社区渠道与我们取得联系：</p>
+                        <ul>
+                            <li><b>开发团队</b>：MySqlOps 团队</li>
+                            <li><b>GitHub 反馈与讨论区</b>：<a href="https://github.com/Hakim-Fan/opsmate/issues"
+                                    target="_blank" rel="noopener noreferrer"
+                                    style="color: inherit; text-decoration: underline;">github.com/Hakim-Fan/opsmate/issues</a>
+                            </li>
+                            <li><b>应用内渠道</b>：在应用内进入「设置 - 关于与意见反馈」</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="lang-en-content">
+                    <p><b>MySqlOps</b> &copy; 2026. All rights reserved.</p>
+                </div>
+                <div class="lang-zh-content">
+                    <p><b>MySqlOps</b> &copy; 2026 保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * 语言切换与自适应
+         * - 优先级 1: URL 参数 ?lang=zh 或 ?lang=en
+         * - 优先级 2: 浏览器/操作系统首选语言 navigator.language
+         * - 默认 fallback: 英文
+         */
+        function detectPreferredLanguage() {
+            var params = new URLSearchParams(window.location.search);
+            var langParam = params.get('lang');
+            if (langParam === 'zh' || langParam === 'en') {
+                return langParam;
+            }
+
+            var browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (browserLang.startsWith('zh')) {
+                return 'zh';
+            }
+            return 'en';
+        }
+
+        function setLanguage(lang) {
+            var isZh = (lang === 'zh');
+            document.body.className = isZh ? 'lang-zh' : 'lang-en';
+            document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+            document.title = isZh ? '隐私协议 - OpsMate' : 'Privacy Policy - OpsMate';
+
+            var btn = document.getElementById('langToggle');
+            if (btn) {
+                btn.textContent = isZh ? 'English' : '中文';
+            }
+
+            var newUrl = new URL(window.location.href);
+            if (isZh) {
+                newUrl.searchParams.set('lang', 'zh');
+            } else {
+                newUrl.searchParams.set('lang', 'en');
+            }
+            window.history.replaceState({}, '', newUrl.toString());
+        }
+
+        function toggleLanguage() {
+            var isCurrentlyZh = document.body.classList.contains('lang-zh');
+            setLanguage(isCurrentlyZh ? 'en' : 'zh');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var initialLang = detectPreferredLanguage();
+            setLanguage(initialLang);
+        });
+    </script>
+</body>
+
+</html>
