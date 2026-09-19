@@ -389,37 +389,41 @@
             <div class="section">
                 <div class="lang-en-content">
                     <div class="bilingual-block">
-                        <h3><span class="num">3</span>Special Notice on AI Assistance Features</h3>
+                        <h3><span class="num">3</span>Special Notice on Third-Party AI Features & Data Sharing</h3>
                         <ul>
-                            <li><b>Bring Your Own Key (BYOK)</b>: The AI features provided in the App function strictly
-                                as an interactive client gateway. You must independently procure and configure your own
-                                AI service credentials (such as an API Key from OpenAI, DeepSeek, Anthropic, or
-                                compatible providers). We neither sell AI subscriptions nor levy intermediary fees on AI
-                                interactions;</li>
-                            <li><b>Direct End-to-End Transmission</b>: When using AI features (such as SQL generation,
-                                error interpretation, or query optimization), your submitted prompts and any schema
-                                context you deliberately attach are dispatched <b>directly from your mobile device to
-                                    your chosen AI vendor over an encrypted HTTPS connection</b>. No traffic is routed
-                                through, logged by, or inspected by our servers;</li>
-                            <li><b>Data Sensitivity Advisory & Disclaimer</b>: We strongly urge you to sanitize all
-                                confidential production secrets, proprietary business data, and personally identifiable
-                                information before submitting prompts to third-party AI models. Data retention and model
-                                training practices are governed entirely by your selected AI provider's privacy policy.
-                                The App disclaims all liability for the accuracy, compliance, or downstream processing
-                                of AI-generated content.</li>
+                            <li><b>Bring Your Own Key (BYOK) Architecture</b>: The AI features provided in the App function strictly
+                                as a client-side interface. You independently configure your own AI service credentials (such as an API Key from OpenAI, DeepSeek, Anthropic, or compatible custom endpoints). We neither provide nor sell AI subscriptions, nor do we levy fees on AI interactions;</li>
+                            <li><b>Disclosed Data Sent & Explicit Purposes</b>: When you actively use the AI features, only the minimum data necessary to process your request is sent:
+                                <ul>
+                                    <li><b>User Prompts</b>: Natural language questions or instructions you input;</li>
+                                    <li><b>Table Schema Metadata</b>: Table and column structure definitions (DDL) from your selected database, used solely to assist the AI model in generating syntactically valid and context-accurate SQL;</li>
+                                    <li><b>Error Diagnostics</b>: SQL execution error messages when troubleshooting failed queries.</li>
+                                </ul>
+                                <i>All data sent is strictly used for the immediate purpose of generating SQL, explaining queries, or analyzing diagnostic errors within your active session.</i>
+                            </li>
+                            <li><b>Direct End-to-End Transmission</b>: All user prompts and schema context are dispatched <b>directly from your mobile device to your designated third-party AI service provider over an encrypted HTTPS connection</b>. No traffic is routed through, collected, inspected, or retained on any of our servers;</li>
+                            <li><b>In-App Prior Consent Requirement</b>: Before any data is transmitted to a third-party AI service for the first time, the App presents an in-app notice disclosing the exact data being sent and the recipient, and explicitly obtains your permission. If you decline, no data will be transmitted;</li>
+                            <li><b>Confirmation of Equivalent Protection by Third Parties</b>: The App confirms and requires that any third-party AI service provider (including OpenAI, DeepSeek, Anthropic, and other supported providers) with whom data is shared provides the same or equal protection of user data as set forth in this Privacy Policy under their respective enterprise and API data privacy terms. We never authorize third-party AI providers to use your confidential database queries or schemas for public model training.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="lang-zh-content">
                     <div class="bilingual-block">
-                        <h3><span class="num">三</span>AI 辅助功能特别说明</h3>
+                        <h3><span class="num">三</span>第三方 AI 辅助功能与数据共享特别说明</h3>
                         <ul>
-                            <li><b>用户自主配置（BYOK）</b>：本应用内置的 AI 功能仅作为纯客户端调用入口。您需要自行取得并配置相应 AI 服务商的 API 访问凭据（如
-                                OpenAI、DeepSeek、Anthropic 或兼容协议的私有大模型）。我们不销售任何 AI 算力服务，亦不就 AI 功能收取中转费用；</li>
-                            <li><b>端到端直接通信</b>：当您发起 AI 智能辅助（如 SQL 自动生成、报错诊断、性能调优建议）时，您所输入的提示词以及您自主选择附加的上下文（如表结构 Schema
-                                片段、SQL 语句）均由您的设备<b>通过加密通道（HTTPS）直接与您配置的第三方 AI 服务商进行端到端通信</b>，不经过我们的任何中继服务器；</li>
-                            <li><b>数据脱敏提醒与免责</b>：请您在向 AI 发送请求前，务必对核心业务机密、未脱敏的生产环境数据进行谨慎评估与脱敏。第三方 AI
-                                服务商对交互数据的存储、留存与模型训练策略受其自身隐私协议约束，我们对第三方服务商的数据处理行为以及 AI 生成内容的准确性不承担连带担保责任。</li>
+                            <li><b>用户自主配置（BYOK）架构</b>：本应用内置的 AI 功能仅作为纯客户端调用入口。您需要自行取得并配置相应 AI 服务商的 API 访问凭据（如
+                                OpenAI、DeepSeek、Anthropic 或兼容协议的大模型）。我们不销售任何 AI 算力服务，亦不就 AI 功能收取中转费用；</li>
+                            <li><b>明示传输的数据内容与具体用途</b>：当您主动使用 AI 辅助功能时，仅向第三方模型发送实现该功能所必需的最小数据项：
+                                <ul>
+                                    <li><b>用户提示词（Prompts）</b>：您在输入框中主动填写的自然语言提问或指令；</li>
+                                    <li><b>表结构元数据（Schema）</b>：您当前所关联数据库的表名、列名与 DDL 定义，仅用于辅助大模型理解业务上下文并生成语法正确的准确 SQL；</li>
+                                    <li><b>报错与执行诊断信息</b>：SQL 执行失败时的错误提示，用于请求 AI 进行诊断与调优建议。</li>
+                                </ul>
+                                <i>上述数据仅在当前会话中用于即时生成 SQL、解释查询与定位错误，绝不作任何其他用途。</i>
+                            </li>
+                            <li><b>端到端直接加密通信</b>：当发起 AI 交互时，您的输入与表结构上下文均由您的本地设备<b>通过加密通道（HTTPS）直接发往您所指定的第三方 AI 服务商</b>，绝不经过我们的任何中继服务器，我们亦无技术途径读取、留存或转储该数据；</li>
+                            <li><b>应用内前置知情与授权同意</b>：在向第三方 AI 服务商发起首次数据传输前，本应用会在应用内弹出专门的知情通知，明示所传输的数据内容及接收方，并在取得您的明确授权同意后方才执行发送。若您拒绝授权，本应用绝不会向第三方发起任何数据通信；</li>
+                            <li><b>第三方同等安全保护确认</b>：本应用确认并要求与本应用发生数据交互的任何第三方 AI 服务商（包括但不限于 OpenAI、DeepSeek、Anthropic 等）均在其商业及 API 隐私条款中提供与本隐私协议同等或等效的数据安全保护水平。本应用绝不授权任何第三方服务商将您的核心业务数据、提示词或库表结构用于模型公开训练。</li>
                         </ul>
                     </div>
                 </div>
